@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">L04-Reservation</string>
+    <string name="online_reservation">Online Reservation</string>
+    <string name="dan_s_diner">Dan\'s Diner</string>
+    <string name="name">Name:</string>
+    <string name="name2">Name</string>
+    <string name="number">Number:</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="group_size">Group Size</string>
+    <string name="table_area">Table Area</string>
+    <string name="smoking_area">Smoking Area</string>
+    <string name="non_smoking_area">Non-Smoking Area</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+</resources>
