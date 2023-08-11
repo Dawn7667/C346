@@ -7,10 +7,15 @@ import android.widget.ListView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class MovieList extends AppCompatActivity {
 
     Button btnPG13;
     ListView lvMovies;
+    ArrayList<MovieListing> alMovies;
+
+    CustomAdapter caMovies;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -19,5 +24,10 @@ public class MovieList extends AppCompatActivity {
 
         btnPG13 = findViewById(R.id.buttonShowPG13);
         lvMovies = findViewById(R.id.movieList);
+
+        alMovies = new ArrayList<>();
+
+        caMovies = new CustomAdapter(this, R.layout.movie_list_row, alMovies);
+        lvMovies.setAdapter(caMovies);
     }
 }
