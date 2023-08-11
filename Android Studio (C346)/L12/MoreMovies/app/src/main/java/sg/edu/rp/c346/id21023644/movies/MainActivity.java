@@ -49,15 +49,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        btnClear.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                alToDo.clear();
-//                aaToDo.notifyDataSetChanged();
-//                Toast.makeText(MainActivity.this, "To Do List Cleared", Toast.LENGTH_LONG).show();
-//            }
-//        });
-
         alMovies = new ArrayList<>();
         aaMovies = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, alMovies);
         lvMovies.setAdapter(aaMovies);
