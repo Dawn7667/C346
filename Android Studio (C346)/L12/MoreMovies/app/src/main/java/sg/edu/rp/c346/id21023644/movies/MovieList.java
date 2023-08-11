@@ -14,7 +14,6 @@ public class MovieList extends AppCompatActivity {
     Button btnPG13;
     ListView lvMovies;
     ArrayList<MovieListing> alMovies;
-
     CustomAdapter caMovies;
 
     @Override
