@@ -42,7 +42,7 @@
         android:id="@+id/textViewYear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Movie Title"
+        android:text="Year"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_margin="5dp"/>
 
