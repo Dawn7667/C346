@@ -1,5 +1,6 @@
 package sg.edu.rp.c346.id21023644.movies;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -38,12 +39,27 @@ public class MovieModify extends AppCompatActivity {
         btnCancel = findViewById(R.id.buttonCancel);
         spnRating = findViewById(R.id.spinnerRating);
 
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 alMovies.clear();
                 aaMovies.notifyDataSetChanged();
                 Toast.makeText(MovieModify.this, "Movie Deleted", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MovieModify.this, MovieList.class);
+                startActivity(intent);
             }
         });
     }
