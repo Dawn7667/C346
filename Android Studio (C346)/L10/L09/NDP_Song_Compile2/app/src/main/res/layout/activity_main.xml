@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding = "10dp">
+
+
+    <TextView
+        android:id="@+id/tvSongTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/song_title"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:id="@+id/etSongTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="25sp"
+        android:hint="@string/enter_song_title_here"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/tvSinger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="@string/singer" />
+
+    <EditText
+        android:id="@+id/etSinger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="25sp"
+        android:hint="@string/enter_singer_name_here"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/yearTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="@string/year" />
+
+    <EditText
+        android:id="@+id/etYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="25sp"
+        android:hint="@string/enter_year_of_release_here"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/starsTitle"
+        android:layout_width="match_parent"
+        android:textSize="25sp"
+        android:layout_height="wrap_content"
+        android:text="@string/stars" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupStars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonStars1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="22.5sp"
+            android:layout_marginRight="20dp"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonStars2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textSize="22.5sp"
+            android:layout_marginRight="20dp"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonStars3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textSize="22.5sp"
+            android:layout_marginRight="20dp"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonStars4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textSize="22.5sp"
+            android:layout_marginRight="20dp"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonStars5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textSize="22.5sp"
+            android:layout_marginRight="20dp"/>
+
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonInsert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/insert"
+            android:padding="3dp"
+            android:layout_marginEnd="7dp"/>
+
+        <Button
+            android:id="@+id/buttonShowList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/show_list"
+            android:layout_marginStart="7dp"/>
+
+</LinearLayout>
+
+</LinearLayout>
