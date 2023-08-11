@@ -1,5 +1,6 @@
 package sg.edu.rp.c346.id21023644.movies;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -49,9 +51,25 @@ public class MovieModify extends AppCompatActivity {
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                alMovies.clear();
-                aaMovies.notifyDataSetChanged();
-                Toast.makeText(MovieModify.this, "Movie Deleted", Toast.LENGTH_LONG).show();
+                AlertDialog.Builder myBuilder = new AlertDialog.Builder(MovieModify.this);
+
+                myBuilder.setTitle("Warning");
+                myBuilder.setMessage("Are you sure you want to delete the selected movie?");
+                myBuilder.setCancelable(false);
+
+                myBuilder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+                        alMovies.clear();
+                        aaMovies.notifyDataSetChanged();
+                        Toast.makeText(MovieModify.this, "Movie Deleted", Toast.LENGTH_LONG).show();
+                    }
+                });
+
+                //Configure the 'neutral' button
+                myBuilder.setNeutralButton("Cancel", null);
+                AlertDialog myDialog = myBuilder.create();
+                myDialog.show();
             }
         });
 
