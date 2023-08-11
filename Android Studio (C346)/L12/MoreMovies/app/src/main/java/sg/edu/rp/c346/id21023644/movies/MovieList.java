@@ -1,6 +1,7 @@
 package sg.edu.rp.c346.id21023644.movies;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -28,5 +29,17 @@ public class MovieList extends AppCompatActivity {
 
         caMovies = new CustomAdapter(this, R.layout.movie_list_row, alMovies);
         lvMovies.setAdapter(caMovies);
+
+        btnPG13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                if (listing.getRating() == "PG13"){
+//                    alMovies = new ArrayList<>();
+//
+//                    caMovies = new CustomAdapter(this, R.layout.movie_list_row, alMovies);
+//                    lvMovies.setAdapter(caMovies);
+//                }
+            }
+        });
     }
 }
