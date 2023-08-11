@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Modules</string>
+    <string name="c346">C346 Mobile App Development</string>
+    <string name="c206">C206 Software Development Process</string>
+    <string name="c218">C218 UI/UX Design for Apps</string>
+    <string name="c338">C338 AI and Machine Learning</string>
+    <string name="c346_details">Module Code: C346 \nModule Name: Mobile App Development \nAcademic Year: 2023 \nSemester 1 \nModule Credit:4 \nVenue: E63A</string>
+    <string name="c206_details">Module Code: C206 \nModule Name: Software Development Process \nAcademic Year: 2023 \nSemester 1 \nModule Credit:4 \nVenue: W64C</string>
+    <string name="c218_details">Module Code: C218 \nModule Name: UI/UX Design for Apps \nAcademic Year: 2023 \nSemester 1 \nModule Credit:4 \nVenue: W64N</string>
+    <string name="c338_details">Module Code: C338 \nModule Name: AI and Machine Learning \nAcademic Year: 2023 \nSemester 1 \nModule Credit:4 \nVenue: E62L</string>
+
+</resources>
