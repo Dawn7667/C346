@@ -2,6 +2,7 @@ package sg.edu.rp.c346.id21023644.movies;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -46,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
                 alMovies.add(listing);
                 aaMovies.notifyDataSetChanged();
                 Toast.makeText(MainActivity.this, "Movie Added", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnShowList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MovieList.class);
+                startActivity(intent);
             }
         });
 
