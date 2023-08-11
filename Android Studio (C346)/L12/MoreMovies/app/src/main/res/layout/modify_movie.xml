@@ -7,6 +7,14 @@
     android:padding="15dp">
 
     <TextView
+        android:id="@+id/textViewID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movie ID:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_margin="5dp"/>
+
+    <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
