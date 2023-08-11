@@ -1,13 +1,13 @@
 package sg.edu.rp.c346.id21023644.movies;
 
-public class Listing {
+public class MovieListing {
 
     String title;
     String genre;
     int year;
     String rating;
 
-    public Listing (String title, String genre, int year, String rating){
+    public MovieListing (String title, String genre, int year, String rating){
         this.title = title;
         this.genre = genre;
         this.year = year;

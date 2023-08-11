@@ -14,39 +14,39 @@ public class CustomAdapter extends ArrayAdapter {
 
     Context parent_context;
     int layout_id;
-    ArrayList<Listing> movieList;
+    ArrayList<MovieListing> movieList;
 
-    public CustomAdapter(Context context, int resource, ArrayList<Listing> objects){
+    public CustomAdapter(Context context, int resource, ArrayList<MovieListing> objects){
         super(context, resource, objects);
         parent_context = context;
         layout_id = resource;
         movieList = objects;
     }
 
-//    @Override
-//    public View getView(int position, View convertView, ViewGroup parent) {
-//
-//        LayoutInflater inflater = (LayoutInflater) parent_context.
-//                getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//
-//        View rowView = inflater.inflate(layout_id, parent, false);
-//
-//        TextView tvName = rowView.findViewById(R.id.textViewName);
-//        TextView tvCode = rowView.findViewById(R.id.textViewCountryCode);
-//        TextView tvNum = rowView.findViewById(R.id.textViewPhoneNum);
-//        ImageView ivGender = rowView.findViewById(R.id.imageViewGender);
-//
-//        Contact currentItem = contactList.get(position);
-//        tvName.setText(currentItem.getName());
-//        tvCode.setText("+" + currentItem.getCountryCode());
-//        tvNum.setText(currentItem.getPhoneNum() + "");
-//        if (currentItem.getGender() == 'M') {
-//            ivGender.setImageResource(R.drawable.male);
-//        } else {
-//            ivGender.setImageResource(R.drawable.female);
-//        }
-//
-//        return rowView;
-//    }
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+
+        LayoutInflater inflater = (LayoutInflater) parent_context.
+                getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        View rowView = inflater.inflate(layout_id, parent, false);
+
+        TextView tvName = rowView.findViewById(R.id.textViewName);
+        TextView tvCode = rowView.findViewById(R.id.textViewCountryCode);
+        TextView tvNum = rowView.findViewById(R.id.textViewPhoneNum);
+        ImageView ivGender = rowView.findViewById(R.id.imageViewGender);
+
+        Contact currentItem = contactList.get(position);
+        tvName.setText(currentItem.getName());
+        tvCode.setText("+" + currentItem.getCountryCode());
+        tvNum.setText(currentItem.getPhoneNum() + "");
+        if (currentItem.getGender() == 'M') {
+            ivGender.setImageResource(R.drawable.male);
+        } else {
+            ivGender.setImageResource(R.drawable.female);
+        }
+
+        return rowView;
+    }
 }
 

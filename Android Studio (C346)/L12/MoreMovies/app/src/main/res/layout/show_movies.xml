@@ -6,6 +6,13 @@
     android:orientation="vertical"
     android:padding="15dp">
 
+    <Button
+        android:id="@+id/buttonShowPG13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Show all PG-13 Movies" />
+
     <ListView
         android:id="@+id/movieList"
         android:layout_width="wrap_content"
