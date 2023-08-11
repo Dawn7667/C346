@@ -29,24 +29,40 @@ public class CustomAdapter extends ArrayAdapter {
         LayoutInflater inflater = (LayoutInflater) parent_context.
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View rowView = inflater.inflate(layout_id, parent, false);
+        View movieView = inflater.inflate(layout_id, parent, false);
 
-        TextView tvName = rowView.findViewById(R.id.textViewName);
-        TextView tvCode = rowView.findViewById(R.id.textViewCountryCode);
-        TextView tvNum = rowView.findViewById(R.id.textViewPhoneNum);
-        ImageView ivGender = rowView.findViewById(R.id.imageViewGender);
+        TextView tvTitle = movieView.findViewById(R.id.textViewTitle);
+        TextView tvGenre = movieView.findViewById(R.id.textViewGenre);
+        TextView tvYear = movieView.findViewById(R.id.textViewYear);
+        ImageView ivRate = movieView.findViewById(R.id.imageViewRating);
 
-        Contact currentItem = contactList.get(position);
-        tvName.setText(currentItem.getName());
-        tvCode.setText("+" + currentItem.getCountryCode());
-        tvNum.setText(currentItem.getPhoneNum() + "");
-        if (currentItem.getGender() == 'M') {
-            ivGender.setImageResource(R.drawable.male);
-        } else {
-            ivGender.setImageResource(R.drawable.female);
+        MovieListing currentItem = movieList.get(position);
+        tvTitle.setText(currentItem.getTitle());
+        tvGenre.setText("+" + currentItem.getGenre());
+        tvYear.setText(currentItem.getYear());
+        if (currentItem.getRating() == "G") {
+            ivRate.setImageResource(R.drawable.rating_g);
+        }
+        else if(currentItem.getRating() == "PG") {
+            ivRate.setImageResource(R.drawable.rating_pg);
+        }
+        else if(currentItem.getRating() == "PG13") {
+            ivRate.setImageResource(R.drawable.rating_pg13);
+        }
+        else if(currentItem.getRating() == "NC16") {
+            ivRate.setImageResource(R.drawable.rating_nc16);
+        }
+        else if(currentItem.getRating() == "M18") {
+            ivRate.setImageResource(R.drawable.rating_m18);
+        }
+        else if(currentItem.getRating() == "R21") {
+            ivRate.setImageResource(R.drawable.rating_r21);
+        }
+        else {
+            ivRate.setImageResource(R.drawable.ic_launcher_background);
         }
 
-        return rowView;
+        return movieView;
     }
 }
 
