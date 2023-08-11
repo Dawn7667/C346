@@ -57,12 +57,13 @@ public class MovieModify extends AppCompatActivity {
                 myBuilder.setMessage("Are you sure you want to delete the selected movie?");
                 myBuilder.setCancelable(false);
 
+                //Configure the 'positive' button
                 myBuilder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int which) {
                         alMovies.clear();
                         aaMovies.notifyDataSetChanged();
-                        Toast.makeText(MovieModify.this, "Movie Deleted", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MovieModify.this, "Movie Deleted", Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -76,8 +77,27 @@ public class MovieModify extends AppCompatActivity {
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MovieModify.this, MovieList.class);
-                startActivity(intent);
+
+                AlertDialog.Builder myBuilder = new AlertDialog.Builder(MovieModify.this);
+
+                myBuilder.setTitle("Warning");
+                myBuilder.setMessage("Are you sure you want to discard your changes?");
+                myBuilder.setCancelable(false);
+
+                //Configure the 'positive' button
+                myBuilder.setPositiveButton("Discard", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+                        Intent intent = new Intent(MovieModify.this, MovieList.class);
+                        startActivity(intent);
+                        Toast.makeText(MovieModify.this, "Changes discarded", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                //Configure the 'neutral' button
+                myBuilder.setNeutralButton("Do not discard", null);
+                AlertDialog myDialog = myBuilder.create();
+                myDialog.show();
             }
         });
     }
